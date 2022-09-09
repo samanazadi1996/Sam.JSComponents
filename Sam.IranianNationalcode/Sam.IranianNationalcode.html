@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>Sam.IranianNationalcode JS Project</title>
+</head>
+<form>
+
+    <div>
+        <label for="Nationalcode">Nationalcode : </label>
+        <input id="Nationalcode">
+        <span for="Nationalcode"></span>
+    </div>
+    <div>
+        <input type="button" value="submit" onclick="$('form').validate()">
+    </div>
+</form>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+    <script src="Sam.IranianNationalcode.js"></script>
+    <script>
+        document.getElementById("Nationalcode").IsNatonalcode()
+    </script>
+</body>
+
+</html>
