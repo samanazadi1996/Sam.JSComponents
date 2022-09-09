@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <title>Sam.Notification JS Project</title>
+</head>
+
+<body>
+    <button onclick="Notif('default','default subject','message default')">default</button>
+    <button onclick="Notif('error','error subject','message error')">Error</button>
+    <button onclick="Notif('success','success subject','message success')">Success</button>
+    <button onclick="Notif('info','info subject','message info')">info</button>
+    <button onclick="Notif('warning','warning subject','message warning')">warning</button>
+    <script src="Sam.Notification.js"></script>
+    <script>
+        InitNotification(
+            {
+                position: "BottomLeft",
+                timeout: 10000
+            }
+        )
+    </script>
+</body>
+
+</html>
