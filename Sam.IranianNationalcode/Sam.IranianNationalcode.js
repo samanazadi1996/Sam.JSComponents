@@ -1,19 +1,18 @@
 HTMLElement.prototype.IsNatonalcode = function () {
   const Validate = nationalcode => {
-    if (IsNatonalcode(nationalcode)) {
-      this.style.color = "green"
-
-    } else {
-      this.style.color = "red"
-    }
+    this.value = nationalcode = nationalcode.replace(/\D/g, "")
+    this.style.color = IsNatonalcode(nationalcode) ? "green" : "red"
   };
-
+  this.setAttribute("maxlength", 10)
   this.onkeyup = function () { Validate(this.value) }
   this.oncut = function () { Validate(this.value) }
   this.onload = function () { Validate(this.value) }
 
 }
 function IsNatonalcode(notionalcode) {
+  for (var index = 0; index < 10; index++)
+    if (notionalcode == new Array(11).join(index)) return false
+
   if (notionalcode.length != 10) return false
   if (notionalcode.substr(0, 3) == '000') return false;
 
