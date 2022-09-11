@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <title>Sam.Rate JS Project</title>
+</head>
+
+<body>
+    <div>
+        <input class="Rate" MaxRate="4" value="2">
+    </div>
+    <div>
+        <input class="Rate" MaxRate="12" value="6" Nullable="true">
+    </div>
+    <div>
+        <input id="Rate" MaxRate="6" value="3">
+    </div>
+    <div>
+        <input id="Rate2" MaxRate="5" value="2" Nullable=true"">
+    </div>
+
+    <script src="Sam.Rate.js"></script>
+    <script>
+        document.getElementsByClassName('Rate').InitRate()
+        document.getElementById('Rate').InitRate()
+        document.getElementById('Rate2').InitRate()
+    </script>
+</body>
+
+</html>
