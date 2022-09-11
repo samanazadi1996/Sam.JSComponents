@@ -51,16 +51,13 @@ HTMLElement.prototype.LoadTreeView = function (data, options = null) {
             spn.onclick = function () {
                 spnList.forEach(element => {
                     element.style.color = null
-                    element.removeAttribute('IsSelected')
                 });
 
                 if (body.attributes['Selected']?.value == spn.attributes['TreeViewId'].value) {
                     body.removeAttribute('Selected')
-                    this.removeAttribute('IsSelected')
                     this.style.color = null
                 } else {
                     this.style.color = 'blue'
-                    this.setAttribute('IsSelected', spn.attributes['TreeViewId'].value)
                     body.setAttribute('Selected', spn.attributes['TreeViewId'].value)
                 }
             }
