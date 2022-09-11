@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <title>Sam.Toaster JS Project</title>
+</head>
+
+<body>
+    <button onclick="Toast('default','default subject','message default')">default</button>
+    <button onclick="Toast('error','error subject','message error')">Error</button>
+    <button onclick="Toast('success','success subject','message success')">Success</button>
+    <button onclick="Toast('info','info subject','message info')">info</button>
+    <button onclick="Toast('warning','warning subject','message warning')">warning</button>
+    <script src="Sam.Toaster.min.js"></script>
+    <script>
+        InitToaster(
+            {
+                position: "BottomLeft",
+                timeout: 10000
+            }
+        )
+    </script>
+</body>
+
+</html>

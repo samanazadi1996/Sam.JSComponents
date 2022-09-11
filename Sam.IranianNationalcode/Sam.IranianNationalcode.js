@@ -1,3 +1,5 @@
+// Created By https://github.com/samanazadi1996
+
 HTMLElement.prototype.IsNatonalcode = function () {
   const Validate = nationalcode => {
     this.value = nationalcode = nationalcode.replace(/\D/g, "")

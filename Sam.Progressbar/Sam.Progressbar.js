@@ -1,3 +1,5 @@
+// Created By https://github.com/samanazadi1996
+
 HTMLElement.prototype.InitProgressbar = function () {
   if (!this.attributes["progressbar-Active"]) {
     var color = this.attributes["progressbar-color"]?.value ?? "blue"

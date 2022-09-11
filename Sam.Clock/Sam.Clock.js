@@ -1,3 +1,5 @@
+// Created By https://github.com/samanazadi1996
+
 HTMLElement.prototype.InitClock = function () {
     this.style.position = "relative"
 

@@ -1,3 +1,5 @@
+// Created By https://github.com/samanazadi1996
+
 HTMLElement.prototype.InitRate = function (nullable = null) {
     this.style.display = "none"
     var maxvalue = this.attributes['MaxRate']?.value ?? 5
