@@ -1,0 +1,79 @@
+<html>
+
+<head>
+    <title>Sam.TreeView JS Project</title>
+</head>
+
+<body>
+    <div id="treeView">
+    </div>
+    <div id="treeView2">
+    </div>
+
+    <script src="Sam.TreeView.js"></script>
+    <script>
+        function GetData() {
+            return [
+                {
+                    id: 1,
+                    text: 'one',
+                    parentId: null
+                },
+                {
+                    id: 2,
+                    text: 'two',
+                    parentId: null
+                },
+                {
+                    id: 3,
+                    text: 'three',
+                    parentId: null
+                },
+                {
+                    id: 4,
+                    text: 'one one',
+                    parentId: 1
+                },
+                {
+                    id: 5,
+                    text: 'one two',
+                    parentId: 1
+                },
+                {
+                    id: 6,
+                    text: 'one three',
+                    parentId: 1
+                },
+                {
+                    id: 7,
+                    text: 'two two',
+                    parentId: 2
+                },
+                {
+                    id: 8,
+                    text: 'two three',
+                    parentId: 2
+                },
+                {
+                    id: 9,
+                    text: 'two three one',
+                    parentId: 8
+                },
+            ];
+        }
+
+        document.getElementById('treeView').LoadTreeView(
+            GetData(),
+            {
+                TextFieldName: 'text',
+                IdFieldName: 'id',
+                ParentId: 'parentId'
+            }
+        )
+
+        document.getElementById('treeView2').LoadTreeView(GetData())
+
+    </script>
+</body>
+
+</html>
