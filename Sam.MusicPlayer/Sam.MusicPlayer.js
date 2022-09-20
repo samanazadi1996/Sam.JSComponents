@@ -36,10 +36,10 @@ HTMLElement.prototype.InitMusicPlayer = function (url) {
         return spn
     }
 
-    var playImage = CreateImage("https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-arrow-right-b-512.png");
-    var pauseImage = CreateImage("https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-pause-512.png");
-    var rewindImage = CreateImage("https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-rewind-512.png");
-    var forwardImage = CreateImage("https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-fastforward-128.png");
+    var playImage = CreateImage("icons/play.png");
+    var pauseImage = CreateImage("icons/pause.png");
+    var rewindImage = CreateImage("icons/rewind.png");
+    var forwardImage = CreateImage("icons/fastforward.png");
 
     var musicPlayer = document.createElement("div")
     musicPlayer.style.boxShadow = `0px 0px 14px ${colorTheme}`
