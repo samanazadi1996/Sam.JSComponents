@@ -1,0 +1,201 @@
+.InitImageCropper {
+    position: relative;
+    overflow: hidden;
+    background-size: contain;
+}
+
+.InitImageCropper img {
+    display: none;
+}
+
+.InitImageCropper .Cropper {
+    position: absolute;
+    box-shadow: -500px -500px 1000px 1000px #00aaaaaa;
+    cursor: move;
+}
+
+.InitImageCropper .Cropper .resRight {
+    position: absolute;
+    width: 2px;
+    right: 0px;
+    height: 100%;
+    cursor: ew-resize;
+    background-color: #0000ff;
+    z-index: 1;
+}
+
+.InitImageCropper .Cropper .resLeft {
+    position: absolute;
+    width: 2px;
+    left: 0px;
+    height: 100%;
+    cursor: ew-resize;
+    background-color: #0000ff;
+    z-index: 1;
+}
+
+.InitImageCropper .Cropper .resBottom {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    height: 2px;
+    cursor: s-resize;
+    background-color: #0000ff;
+    z-index: 1;
+}
+
+.InitImageCropper .Cropper .resTop {
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    height: 2px;
+    cursor: s-resize;
+    background-color: #0000ff;
+    z-index: 1;
+}
+
+.InitImageCropper .Cropper .yl {
+    position: absolute;
+    width: 1px;
+    left: 33%;
+    height: 100%;
+    background-color: #808080ee;
+    transform:translateX(-0.5px);
+}
+
+.InitImageCropper .Cropper .yr {
+    position: absolute;
+    width: 1px;
+    left: 66%;
+    height: 100%;
+    background-color: #808080ee;
+    transform:translateX(-0.5px);
+}
+.InitImageCropper .Cropper .xt {
+    position: absolute;
+    width: 100%;
+    top: 33%;
+    height: 1px;
+    background-color: #808080ee;
+    transform:translateY(-0.5px);
+}
+.InitImageCropper .Cropper .xb {
+    position: absolute;
+    width: 100%;
+    top: 66%;
+    height: 1px;
+    background-color: #808080ee;
+    transform:translateY(-0.5px);
+}
+
+.InitImageCropper .Cropper .tl {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    top:-6px;
+    left:-6px;
+    background-color: #0000ff;
+    transform: translate(3px, 3px);
+    cursor: se-resize;
+    z-index: 2;
+}
+.InitImageCropper .Cropper .tr {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    top:-6px;
+    right:0px;
+    background-color: #0000ff;
+    transform: translate(3px, 3px);
+    cursor: ne-resize;
+    z-index: 2;
+}
+.InitImageCropper .Cropper .bl {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    bottom:0px;
+    left:-6px;
+    background-color: #0000ff;
+    transform: translate(3px, 3px);
+    cursor: ne-resize;
+    z-index: 2;
+}
+.InitImageCropper .Cropper .br {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    bottom:0px;
+    right:0px;
+    background-color: #0000ff;
+    transform: translate(3px, 3px);
+    cursor: se-resize;
+    z-index: 2;
+}
+
+.InitImageCropper .Cropper .resl {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    left: -6px;
+    top: 50%;
+    background-color: #0000ff;
+    transform: translate(3px, -4px);
+    z-index: 2;
+    cursor: ew-resize;
+}
+
+.InitImageCropper .Cropper .rest {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    top: -6px;
+    left: 50%;
+    background-color: #0000ff;
+    transform: translate(-4px, 3px);
+    cursor: n-resize;
+    z-index: 2;
+}
+
+.InitImageCropper .Cropper .resb {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    bottom: 0px;
+    left: 50%;
+    background-color: #0000ff;
+    transform: translate(-4px, 3px);
+    cursor: n-resize;
+    z-index: 2;
+}
+.InitImageCropper .Cropper .resr {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    right: 0px;
+    top: 50%;
+    background-color: #0000ff;
+    transform: translate(3px, -4px);
+    cursor: ew-resize;
+    z-index: 2;
+}
+
+.CropperMenu{
+    background-color: white;
+    display: none;
+    position: absolute;
+    padding: 5px;
+    border: 1px solid silver;
+    z-index: 3;
+}
+.CropperMenu p{
+    cursor: pointer;
+    border-bottom: 1px solid white;
+    padding: 3px;
+    margin: 0px;
+    font-family: system-ui;
+    }
+    .CropperMenu p:hover{
+        color: blue;
+        border-bottom: 1px solid blue;
+        }

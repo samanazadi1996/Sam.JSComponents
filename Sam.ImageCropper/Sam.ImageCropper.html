@@ -1,0 +1,20 @@
+<html>
+
+<head>
+    <title>Sam.ImageCropper JS Project</title>
+    <link rel="stylesheet" href="Sam.ImageCropper.css">
+</head>
+
+<body>
+    <input type="file" name="image" id="image">
+    <div style="width: 300px" id="cropper">
+
+    </div>
+    <script src="Sam.ImageCropper.js"></script>
+    <script>
+        var file = document.getElementById('image')
+        document.getElementById('cropper').InitImageCropper(file, { aspectRatio: 16 / 9 })
+    </script>
+</body>
+
+</html>
