@@ -60,7 +60,7 @@
     left: 33%;
     height: 100%;
     background-color: #808080ee;
-    transform:translateX(-0.5px);
+    transform: translateX(-0.5px);
 }
 
 .InitImageCropper .Cropper .yr {
@@ -69,64 +69,69 @@
     left: 66%;
     height: 100%;
     background-color: #808080ee;
-    transform:translateX(-0.5px);
+    transform: translateX(-0.5px);
 }
+
 .InitImageCropper .Cropper .xt {
     position: absolute;
     width: 100%;
     top: 33%;
     height: 1px;
     background-color: #808080ee;
-    transform:translateY(-0.5px);
+    transform: translateY(-0.5px);
 }
+
 .InitImageCropper .Cropper .xb {
     position: absolute;
     width: 100%;
     top: 66%;
     height: 1px;
     background-color: #808080ee;
-    transform:translateY(-0.5px);
+    transform: translateY(-0.5px);
 }
 
 .InitImageCropper .Cropper .tl {
     position: absolute;
     width: 8px;
     height: 8px;
-    top:-6px;
-    left:-6px;
+    top: -6px;
+    left: -6px;
     background-color: #0000ff;
     transform: translate(3px, 3px);
     cursor: se-resize;
     z-index: 2;
 }
+
 .InitImageCropper .Cropper .tr {
     position: absolute;
     width: 8px;
     height: 8px;
-    top:-6px;
-    right:0px;
+    top: -6px;
+    right: 0px;
     background-color: #0000ff;
     transform: translate(3px, 3px);
     cursor: ne-resize;
     z-index: 2;
 }
+
 .InitImageCropper .Cropper .bl {
     position: absolute;
     width: 8px;
     height: 8px;
-    bottom:0px;
-    left:-6px;
+    bottom: 0px;
+    left: -6px;
     background-color: #0000ff;
     transform: translate(3px, 3px);
     cursor: ne-resize;
     z-index: 2;
 }
+
 .InitImageCropper .Cropper .br {
     position: absolute;
     width: 8px;
     height: 8px;
-    bottom:0px;
-    right:0px;
+    bottom: 0px;
+    right: 0px;
     background-color: #0000ff;
     transform: translate(3px, 3px);
     cursor: se-resize;
@@ -168,6 +173,7 @@
     cursor: n-resize;
     z-index: 2;
 }
+
 .InitImageCropper .Cropper .resr {
     position: absolute;
     width: 8px;
@@ -180,7 +186,7 @@
     z-index: 2;
 }
 
-.CropperMenu{
+.CropperMenu {
     background-color: white;
     display: none;
     position: absolute;
@@ -188,14 +194,20 @@
     border: 1px solid silver;
     z-index: 3;
 }
-.CropperMenu p{
+
+.CropperMenu p {
     cursor: pointer;
     border-bottom: 1px solid white;
     padding: 3px;
     margin: 0px;
     font-family: system-ui;
-    }
-    .CropperMenu p:hover{
-        color: blue;
-        border-bottom: 1px solid blue;
-        }
+}
+
+.CropperMenu p:hover {
+    color: blue;
+    border-bottom: 1px solid blue;
+}
+
+.CropperMenu hr {
+    margin: 3px -6px 0px -6px;
+}

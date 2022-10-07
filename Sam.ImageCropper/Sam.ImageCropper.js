@@ -269,17 +269,25 @@ HTMLElement.prototype.InitImageCropper = function (input, options = null) {
   element.appendChild(img)
 
   //#region rightClick
+  const CreateSplit = () => {
+    var el = document.createElement("hr")
+    return el
+  }
   var menu = document.createElement("div")
   menu.classList.add("CropperMenu")
   var menuItemCrop = document.createElement("p")
   var menuItemCancel = document.createElement("p")
+  var menuItemSelectAll = document.createElement("p")
 
   menuItemCrop.innerText = "Crop"
   menuItemCancel.innerText = "Cancel"
+  menuItemSelectAll.innerText = "Select All"
 
   menu.appendChild(menuItemCrop)
+  menu.appendChild(menuItemSelectAll)
+  menu.appendChild(CreateSplit())
   menu.appendChild(menuItemCancel)
-  
+
   if (element.addEventListener) {
     element.addEventListener('contextmenu', function (e) {
       menu.style.display = "block"
@@ -290,6 +298,14 @@ HTMLElement.prototype.InitImageCropper = function (input, options = null) {
   }
   menuItemCrop.onclick = function () {
     input.oninput()
+  }
+  menuItemSelectAll.onclick = function () {
+    cropper.style.top = 0
+    cropper.style.left = 0
+    cropper.style.width = element.offsetWidth
+    cropper.style.height = element.offsetHeight
+    SetImageToCanvas()
+    SetCanvasToInput()
   }
   menuItemCancel.onclick = function () {
     menu.removeAttribute("style")
