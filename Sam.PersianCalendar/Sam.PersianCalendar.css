@@ -1,0 +1,25 @@
+.SamPersianCalendar {
+    direction: rtl;
+    position: absolute;
+    background-color: aquamarine;
+    padding: 5px;
+    border: 1px solid blue;
+    border-radius: 5px;
+}
+
+.SamPersianCalendar table tr td {
+    padding: 1px 5px;
+    margin: 1px;
+    border: 1px solid silver;
+}
+.SamPersianCalendar_previous{
+    float: left;
+}
+.SamPersianCalendar_next{
+    float: right;
+}
+.SamPersianCalendar_year{
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+}

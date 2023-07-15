@@ -1,3 +1,4 @@
+// Created By https://github.com/samanazadi1996
 function setSamSmail(val) {
     var face = document.getElementsByClassName("samFace")[0]
     face.style.backgroundColor = `rgb(${255 - val},${val},0)`
