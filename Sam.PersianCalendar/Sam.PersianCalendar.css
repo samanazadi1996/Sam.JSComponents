@@ -1,10 +1,13 @@
 .SamPersianCalendar {
     direction: rtl;
     position: absolute;
-    background-color: aquamarine;
+    background-color: white;
     padding: 5px;
-    border: 1px solid blue;
+    border: 2px solid gray;
     border-radius: 5px;
+    font-family: system-ui;
+    font-weight: bold;
+    display: none;
 }
 
 .SamPersianCalendar table tr td {
@@ -30,4 +33,21 @@
 .SamPersianCalendar_Day {
     cursor: pointer;
     text-align: center;
+}
+
+.SamPersianCalendar_Day_closed {
+    background-color: red;
+}
+
+.SamPersianCalendar_Day_open {
+    background-color: lavenderblush;
+}
+
+.SamPersianCalendar_Day_mark_Selected_Day {
+    background-color: #9999ff88;
+    border-radius: 50%;
+}
+.SamPersianCalendar button {
+    font-family: fantasy;
+    font-size: 16px;
 }

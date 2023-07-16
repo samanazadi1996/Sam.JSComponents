@@ -5,13 +5,13 @@ var monthSelected = 0;
 var yearSelected = 0;
 
 var days = [
-  { name: "شنبه", color: "white", shift: 0 },
-  { name: "یکشنبه", color: "white", shift: 1 },
-  { name: "دوشنبه", color: "white", shift: 2 },
-  { name: "سه‌شنبه", color: "white", shift: 3 },
-  { name: "چهارشنبه", color: "white", shift: 4 },
-  { name: "پنجشنبه", color: "white", shift: 5 },
-  { name: "جمعه", color: "red", shift: 6 },
+  { name: "شنبه", closed: false, shift: 0 },
+  { name: "یکشنبه", closed: false, shift: 1 },
+  { name: "دوشنبه", closed: false, shift: 2 },
+  { name: "سه‌شنبه", closed: false, shift: 3 },
+  { name: "چهارشنبه", closed: false, shift: 4 },
+  { name: "پنجشنبه", closed: false, shift: 5 },
+  { name: "جمعه", closed: true, shift: 6 },
 ];
 var months = [
   { name: null, color: null },
@@ -67,7 +67,11 @@ const CreateHeaderAndAppendToTable = () => {
   for (let index = 0; index < days.length; index++) {
     var temp = document.createElement("td");
     temp.innerText = days[index].name[0];
-    temp.style.backgroundColor = days[index].color;
+    temp.classList =
+      "SamPersianCalendar_Day " +
+      (days[index].closed
+        ? "SamPersianCalendar_Day_closed"
+        : "SamPersianCalendar_Day_open");
     trHeader.appendChild(temp);
   }
   tablePersianCalendar.innerHTML = "";
@@ -99,8 +103,8 @@ function GoToDate() {
   for (let index = 0; index < daysWithShift.length; index++) {
     var temp = document.createElement("td");
     if (daysWithShift[index]) {
-        temp.innerText=daysWithShift[index]
-        temp.classList="SamPersianCalendar_Day"
+      temp.innerText = daysWithShift[index];
+      temp.classList = "SamPersianCalendar_Day";
     }
     tds.push(temp);
   }
@@ -111,10 +115,18 @@ function GoToDate() {
       const element = tds[w * 7 + e];
       if (element) {
         tr.appendChild(element);
-        element.onclick = function () {
-          daySelected = Number(element.innerText);
-          textbox.value = `${yearSelected}/${monthSelected}/${daySelected}`;
-        };
+        if (element.innerText)
+          element.onclick = function () {
+            daySelected = Number(element.innerText);
+            textbox.value = `${yearSelected}/${monthSelected}/${daySelected}`;
+            bodyPersianCalendar.style.display = "none";
+          };
+        if (
+          Number(element.innerText) == daySelected &&
+          monthSelected == textbox.value.split("/")[1] &&
+          yearSelected == textbox.value.split("/")[0]
+        )
+          element.classList.add("SamPersianCalendar_Day_mark_Selected_Day");
       }
     }
     tablePersianCalendar.appendChild(tr);
@@ -236,5 +248,21 @@ HTMLElement.prototype.InitPersianCalendar = function () {
     yearSelected = Number(temp[0]);
     CreateHeaderAndAppendToTable();
     GoToDate();
+    bodyPersianCalendar.style.display = "block";
+
+    bodyPersianCalendar.style.top = this.offsetTop + this.offsetHeight;
+    bodyPersianCalendar.style.left = this.offsetLeft;
   };
+};
+
+NodeList.prototype.InitPersianCalendar = function () {
+  for (let index = 0; index < this.length; index++) {
+    this[index].InitPersianCalendar();
+  }
+};
+
+HTMLCollection.prototype.InitPersianCalendar = function () {
+  for (let index = 0; index < this.length; index++) {
+    this[index].InitPersianCalendar();
+  }
 };
