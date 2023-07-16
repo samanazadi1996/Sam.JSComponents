@@ -83,7 +83,7 @@ function GoToDate() {
   CreateHeaderAndAppendToTable();
 
   monthPersianCalendar.innerText = `${months[monthSelected].name}-${yearSelected}`;
-  bodyPersianCalendar.style.backgroundColor=months[monthSelected].color
+  bodyPersianCalendar.style.backgroundColor = months[monthSelected].color;
   var countDaysInMonth = CountDaysInMonth(monthSelected, yearSelected);
 
   var daysWithShift = [];
@@ -116,18 +116,21 @@ function GoToDate() {
       const element = tds[w * 7 + e];
       if (element) {
         tr.appendChild(element);
-        if (element.innerText)
+        if (element.innerText) {
           element.onclick = function () {
             daySelected = Number(element.innerText);
             textbox.value = `${yearSelected}/${monthSelected}/${daySelected}`;
             bodyPersianCalendar.style.display = "none";
           };
-        if (
-          Number(element.innerText) == daySelected &&
-          monthSelected == textbox.value.split("/")[1] &&
-          yearSelected == textbox.value.split("/")[0]
-        )
-          element.classList.add("SamPersianCalendar_Day_mark_Selected_Day");
+          if (e == 6) element.classList.add("SamPersianCalendar_Day_closed");
+
+          if (
+            Number(element.innerText) == daySelected &&
+            monthSelected == textbox.value.split("/")[1] &&
+            yearSelected == textbox.value.split("/")[0]
+          )
+            element.classList.add("SamPersianCalendar_Day_mark_Selected_Day");
+        }
       }
     }
     tablePersianCalendar.appendChild(tr);
