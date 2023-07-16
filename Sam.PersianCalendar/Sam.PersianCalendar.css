@@ -12,14 +12,22 @@
     margin: 1px;
     border: 1px solid silver;
 }
-.SamPersianCalendar_previous{
+
+.SamPersianCalendar_previous {
     float: left;
 }
-.SamPersianCalendar_next{
+
+.SamPersianCalendar_next {
     float: right;
 }
-.SamPersianCalendar_year{
+
+.SamPersianCalendar_year {
     text-align: center;
     padding: 0px;
     margin: 0px;
+}
+
+.SamPersianCalendar_Day {
+    cursor: pointer;
+    text-align: center;
 }
