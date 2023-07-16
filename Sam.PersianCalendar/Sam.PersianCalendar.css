@@ -38,6 +38,7 @@
 
 .SamPersianCalendar_Day_closed {
     background-color: red;
+    color: white;
 }
 
 .SamPersianCalendar_Day_open {
