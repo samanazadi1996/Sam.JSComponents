@@ -8,6 +8,7 @@
     font-family: system-ui;
     font-weight: bold;
     display: none;
+    transition: 500ms;
 }
 
 .SamPersianCalendar table tr td {
