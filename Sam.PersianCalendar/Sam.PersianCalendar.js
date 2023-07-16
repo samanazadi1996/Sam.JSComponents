@@ -14,19 +14,19 @@ var days = [
   { name: "جمعه", closed: true, shift: 6 },
 ];
 var months = [
-  { name: null, color: null },
-  { name: "فروردین", color: "#00ff0077" },
-  { name: "اردیبهشت", color: "#00ff0077" },
-  { name: "خرداد", color: "#00ff0077" },
-  { name: "تیر", color: "#00ff00" },
-  { name: "مرداد", color: "#00ff00" },
-  { name: "شهریور", color: "#00ff00" },
-  { name: "مهر", color: "#ff8800aa" },
-  { name: "آبان", color: "#ff8800aa" },
-  { name: "آذر", color: "#ff8800aa" },
-  { name: "دی", color: "#00aaffaa" },
-  { name: "بهمن", color: "#00aaffaa" },
-  { name: "اسفند", color: "#00aaffaa" },
+  { name: null },
+  { name: "فروردین" },
+  { name: "اردیبهشت" },
+  { name: "خرداد" },
+  { name: "تیر" },
+  { name: "مرداد" },
+  { name: "شهریور" },
+  { name: "مهر" },
+  { name: "آبان" },
+  { name: "آذر" },
+  { name: "دی" },
+  { name: "بهمن" },
+  { name: "اسفند" },
 ];
 
 const CreateAndAppend = (name, element, cls = null, text = null) => {
@@ -83,7 +83,6 @@ function GoToDate() {
   CreateHeaderAndAppendToTable();
 
   monthPersianCalendar.innerText = `${months[monthSelected].name}-${yearSelected}`;
-  bodyPersianCalendar.style.backgroundColor = months[monthSelected].color;
   var countDaysInMonth = CountDaysInMonth(monthSelected, yearSelected);
 
   var daysWithShift = [];
