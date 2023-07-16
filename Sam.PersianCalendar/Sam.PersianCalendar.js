@@ -38,7 +38,7 @@ const CreateAndAppend = (name, element, cls = null, text = null) => {
 };
 
 var bodyPersianCalendar = document.createElement("div");
-var headerPersianCalendar = CreateAndAppend("div", bodyPersianCalendar);
+var headerPersianCalendar = CreateAndAppend("div", bodyPersianCalendar,"SamPersianCalendar_Header");
 var previousPersianCalendar = CreateAndAppend(
   "button",
   headerPersianCalendar,
@@ -82,7 +82,7 @@ document.body.appendChild(bodyPersianCalendar);
 function GoToDate() {
   CreateHeaderAndAppendToTable();
 
-  monthPersianCalendar.innerText = `${months[monthSelected].name}-${yearSelected}`;
+  monthPersianCalendar.innerText = `${months[monthSelected].name} - ${yearSelected}`;
   var countDaysInMonth = CountDaysInMonth(monthSelected, yearSelected);
 
   var daysWithShift = [];

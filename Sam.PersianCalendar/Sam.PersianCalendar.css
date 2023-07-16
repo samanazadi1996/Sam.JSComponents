@@ -9,12 +9,18 @@
     font-weight: bold;
     display: none;
     transition: 500ms;
+    box-shadow: 0px 0px 20px 0px silver;
+}
+
+.SamPersianCalendar_Header {
+    padding: 2px;
 }
 
 .SamPersianCalendar table tr td {
     padding: 1px 5px;
     margin: 1px;
     border: 1px solid silver;
+    font-weight: bold;
 }
 
 .SamPersianCalendar_previous {
@@ -47,8 +53,10 @@
 
 .SamPersianCalendar_Day_mark_Selected_Day {
     background-color: #9999ff88;
+    color: black;
     border-radius: 50%;
 }
+
 .SamPersianCalendar button {
     font-family: fantasy;
     font-size: 16px;
