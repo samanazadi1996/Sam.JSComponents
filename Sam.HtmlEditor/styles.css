@@ -1,0 +1,23 @@
+.Sam-HtmlEditor-toolBar {
+    border: 2px solid gray;
+    border-radius: 2px;
+    position: absolute;
+    min-width: 128px;
+    background-color: white;
+}
+
+.Sam-HtmlEditor-editor {
+    min-height: 200px;
+}
+
+.Sam-HtmlEditor-toolBar-item {
+    height: 32px;
+    margin: 3px;
+    min-width: 32px;
+}
+
+.Sam-HtmlEditor-toolBar-item>img {
+    height: 50%;
+    width: 100%;
+    transform: scale(1.5);
+}
