@@ -107,7 +107,7 @@ function CreateToolBar(element) {
       setIcon(btn, element);
     });
   };
-  const setColor = () => {
+  const setForeColor = () => {
     var btn = document.createElement("button");
     btn.classList.add("Sam-HtmlEditor-toolBar-item");
     var input = document.createElement("input");
@@ -123,13 +123,30 @@ function CreateToolBar(element) {
     toolBar.appendChild(input);
     toolBar.appendChild(btn);
   };
+  const setBackColor = () => {
+    var btn = document.createElement("button");
+    btn.classList.add("Sam-HtmlEditor-toolBar-item");
+    var input = document.createElement("input");
+    input.setAttribute("type", "color");
+    input.setAttribute("hidden", "");
+    setIcon(btn, "backColor");
+    btn.onclick = function () {
+      input.click();
+    };
+    input.oninput = function () {
+      document.execCommand('backColor', false, input.value);
+    };
+    toolBar.appendChild(input);
+    toolBar.appendChild(btn);
+  };
 
   setImage();
   setPar();
   setFontBold();
   setFontItalic();
   setTextDir();
-  setColor();
+  setForeColor();
+  setBackColor();
 
   return toolBar;
 }
