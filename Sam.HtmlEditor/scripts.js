@@ -76,23 +76,13 @@ function CreateToolBar(element) {
     };
     toolBar.appendChild(select);
   };
-  const setFontBold = () => {
+  const setFontStyle = (style) => {
     var btn = document.createElement("button");
     btn.classList.add("Sam-HtmlEditor-toolBar-item");
     btn.onclick = function () {
-      document.execCommand("bold", false, "b");
+      document.execCommand(style, false, null);
     };
-    setIcon(btn, "bold");
-    toolBar.appendChild(btn);
-  };
-  const setFontItalic = () => {
-    var btn = document.createElement("button");
-    btn.classList.add("Sam-HtmlEditor-toolBar-item");
-    setIcon(btn, "italic");
-    btn.onclick = function () {
-      document.execCommand("italic", false, "i");
-    };
-
+    setIcon(btn, style);
     toolBar.appendChild(btn);
   };
   const setTextDir = () => {
@@ -107,34 +97,18 @@ function CreateToolBar(element) {
       setIcon(btn, element);
     });
   };
-  const setForeColor = () => {
+  const setColor = (color) => {
     var btn = document.createElement("button");
     btn.classList.add("Sam-HtmlEditor-toolBar-item");
     var input = document.createElement("input");
     input.setAttribute("type", "color");
     input.setAttribute("hidden", "");
-    setIcon(btn, "palet");
+    setIcon(btn, color);
     btn.onclick = function () {
       input.click();
     };
     input.oninput = function () {
-      document.execCommand('foreColor', false, input.value);
-    };
-    toolBar.appendChild(input);
-    toolBar.appendChild(btn);
-  };
-  const setBackColor = () => {
-    var btn = document.createElement("button");
-    btn.classList.add("Sam-HtmlEditor-toolBar-item");
-    var input = document.createElement("input");
-    input.setAttribute("type", "color");
-    input.setAttribute("hidden", "");
-    setIcon(btn, "backColor");
-    btn.onclick = function () {
-      input.click();
-    };
-    input.oninput = function () {
-      document.execCommand('backColor', false, input.value);
+      document.execCommand(color, false, input.value);
     };
     toolBar.appendChild(input);
     toolBar.appendChild(btn);
@@ -142,11 +116,11 @@ function CreateToolBar(element) {
 
   setImage();
   setPar();
-  setFontBold();
-  setFontItalic();
+  setFontStyle("bold");
+  setFontStyle("italic");
   setTextDir();
-  setForeColor();
-  setBackColor();
+  setColor("foreColor");
+  setColor("backColor");
 
   return toolBar;
 }
